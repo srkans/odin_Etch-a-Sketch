@@ -3,8 +3,10 @@ let boxQuantity = document.querySelector("input");
 let columns = boxQuantity.value;
 let rows = boxQuantity.value;
 let boxSize = 640/boxQuantity.value;
-boxQuantity.addEventListener("change", function() {updateSizes()} );
+let bgColor = "";
 
+
+boxQuantity.addEventListener("change", function() {updateSizes()} );
 
 const grid = document.createElement("div");
 grid.className = "container";
@@ -50,9 +52,11 @@ function reset() {
     createSheet();
   }
 
+
 grid.addEventListener("mouseover", function(e) {
     if (e.target.matches(".row")) {
         e.target.classList.add("active");
+
     }
 })
 
